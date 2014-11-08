@@ -18,6 +18,9 @@ proc push {p} {
 }
 ```
 
+Link zu Wiki Seite [https://github.com/wolfwejgaard/tclforth/wiki/Objecttypes] (Objecttype)
+
+
 ###code ###
 
 Code words interface Forth with Tcl, handle I/O, events, GUI, etc. They are the low level kernel words of the Forth system.
