@@ -5,7 +5,7 @@ Test-Repo for  https://code.google.com/p/tclforth/
 
 
 
-PLAYING AROUND -- LEARNING  ...
+PLAYING AROUND -- LEARNING GIT
 
 ---
 
