@@ -18,7 +18,7 @@ proc push {p} {
 }
 ```
 
-Link zu Wiki Seite [https://github.com/wolfwejgaard/tclforth/wiki/Objecttypes] (Objecttype)
+Link zu Wiki Seite [Objecttype] (https://github.com/wolfwejgaard/tclforth/wiki/Objecttypes) 
 
 
 ###code ###
