@@ -4,21 +4,21 @@ tclforth
 Test-Repo for  https://code.google.com/p/tclforth/
 
 
-=Words=
+##Words##
 
 The Forth interpreter handles the following types of words.
 
-== proc ==
+### proc ###
 
-!TclForth needs a couple of native Tcl procedures, e.g. stack handling words.
+TclForth needs a couple of native Tcl procedures, e.g. stack handling words.
 
-{{{
+```
 proc push {p} {
     lappend ::stack $p
 }
-}}}
+```
 
-==Code ==
+###Code ###
 
 Code words interface Forth with Tcl, handle I/O, events, GUI, etc. They are the low level kernel words of the Forth system.
 
@@ -26,16 +26,16 @@ The code words are Tcl procs without formal arguments. !TclForth replaces the fo
 
 Example: The Forth word
 
-{{{
+```
 Code int { n1 -- n2 }
     set n2 [expr int($n1)]
-}}}
+```
 is compiled to
-{{{
+```
 proc int {} {
     set n1 [pop];  set n2 [expr int($n1)]; push $n2 ;
 }
-}}}
+```
 
 ==Colon (:)==
 
