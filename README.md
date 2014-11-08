@@ -18,7 +18,7 @@ proc push {p} {
 }
 ```
 
-###Code ###
+###code ###
 
 Code words interface Forth with Tcl, handle I/O, events, GUI, etc. They are the low level kernel words of the Forth system.
 
@@ -27,7 +27,7 @@ The code words are Tcl procs without formal arguments. !TclForth replaces the fo
 Example: The Forth word
 
 ```
-Code int { n1 -- n2 }
+code int { n1 -- n2 }
     set n2 [expr int($n1)]
 ```
 is compiled to
