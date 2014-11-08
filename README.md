@@ -4,6 +4,12 @@ tclforth
 Test-Repo for  https://code.google.com/p/tclforth/
 
 
+
+PLAYING AROUND -- LEARNING  --  WAIT 
+
+---
+
+
 ##Words##
 
 The Forth interpreter handles the following types of words.
