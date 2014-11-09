@@ -9,108 +9,66 @@ PLAYING AROUND -- LEARNING GIT
 
 ---
 
+Tcl is a great software development environment, used and proven in many professional applications. For a quick overview see http://wiki.tcl/299. Due to its long use and continuing care by a dedicated development team Tcl is a truly mature system; you feel it all the way down to inner details. And now, with a little overlay, this universe is available in Forth.
 
-##Words##
+Tcl commands and Forth words are closely related. Both are called by their interpreters to compile or execute. Both in effect create the programming language, and both languages can be changed and extended by you, the programmer. The deciding difference is the notation. Tcl uses the formal prefix notation for command arguments and an infix interpreter for math expressions. If we add a way to pass arguments on a stack, Tcl would be postfix and a postfix Tcl is a Forth system, TclForth.
 
-The Forth interpreter handles the following types of words.
+We can study it with a few commands in the Forth console and the resulting Tcl code in the Codewindow.  (Open the Codewindow in the Setupmenu).
 
-### proc ###
-
-TclForth needs a couple of native Tcl procedures, e.g. stack handling words.
-
+This is the definition of a Tcl command 'write':
 ```
-proc push {p} {
-    lappend ::stack $p
+ok> Tcl proc write {text} {printnl $text}
+```
+The word Tcl passes the following text to the Tcl interpreter.
+
+To test the definition we still put Tcl in front because it is a Tcl command.
+```
+ok> Tcl write "Hello World!"
+Hello World!
+ok>
+```
+
+Now here is the same function written as a code word in Forth.
+```
+ok> Code Write { text -- }  printnl $text
+```
+This is converted by TclForth into
+```
+proc Write {} {
+set text [pop] ; printnl $text
 }
 ```
+and again passed to Tcl for compilation.
 
-Link zu Wiki Seite [Objecttype] (https://github.com/wolfwejgaard/tclforth/wiki/Objecttypes) 
-
-
-###code ###
-
-Code words interface Forth with Tcl, handle I/O, events, GUI, etc. They are the low level kernel words of the Forth system.
-
-The code words are Tcl procs without formal arguments. !TclForth replaces the formal argument by a stack diagram. The compiler uses the diagram to add the appropriate [Stack stack] handling. The stack arguments are converted to local variables in the proc..
-
-Example: The Forth word
-
+Now test it the Forth way:
 ```
-code int { n1 -- n2 }
-    set n2 [expr int($n1)]
-```
-is compiled to
-```
-proc int {} {
-    set n1 [pop];  set n2 [expr int($n1)]; push $n2 ;
-}
+ok> "Hello World!" Write
+Hello World!
+ok>
 ```
 
-==Colon (:)==
+####Discussion###
 
-The colon word is defined by Forth words.
+The only change needed to convert a Tcl command into a Forth word was the addition of ``` "set text [pop] ;" ``` in front of the code, which turns the stack argument 'text' into a local variable with this name. And we need a stack for the parameter, of course.
 
-TF provides a simple solution for the threading of Forth code and the appropriate inner interpreter: We pass the job to Tcl. Colon words are procs that call Forth procs. The execution engine of Tcl is the inner interpreter of Forth.
+####Words###
 
-{{{
-: <name> { -- } <Forth source> ;
-}}}
+TclForth provides the standard set of Forth words as far as they make sense. Lookup the words in the files forth.fth and tk.fth. And see how the words are used in console.fth.
 
-Again, arguments are accepted and results are returned on the parameter stack.
+To really use TclForth you will want some knowledge of Tcl. At least an overview of all the commands and features and how to use them.
 
-{ -- }  is stack notation.
+####Books###
+Brent B. Welch and Jeffrey Hobbs, Practical Programming in Tcl and Tk, 4. edition, Prentice Hall, 2003 --
+This book contains all you might want to know deep into the Tcl system and is highly recommended.
+It covers Tcl up to version 8.4.
 
-Example:
-{{{
-: Prompt { -- }
-     depth 0> withStack and
-     if   "$::stack ok>"
-     else "ok>"
-     then Console append update
-;
-}}}
-becomes
-{{{
-proc Prompt {} {
-     depth;  0>; push $::withStack; and;
-     if [pop]  {
-          push "$::stack ok>";
-     } else {
-          push "ok>";
-     }
-     $::Console insert end [pop]; update;
-}
-}}}
+John K. Ousterhout and Ken Jones, Tcl and the Tk Toolkit, second edition, Addison Westley, 2010 --
+It is a complete revision of the first edition that describes Tcl version 8.5, the version of the Tcl runtimes in the TclForth apps.
 
-== Compiler ==
+Version 8.5 added dictionaries and themed widgets.
 
-As in Tcl, flow control in Forth is handled by the flow words themselves: IF THEN etc are words that are executed when the source is compiled. They are known as immediate words in Forth, !TclForth calls them compilers. A compiler word executes when the source is loaded.
+####Web###
 
-{{{
-Compiler <name> <host action>
-}}}
+*Tutorial*:  https://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html
 
-The compiler words define action in the host and are written in Tcl code.
-
-== Objecttype ==
-
-!TclForth handles data as ObjectTypes.
-
-{{{
-Objecttype <name>  <array of messages and methods>
-}}}
-
-The !ObjectTypes replace CREATE ... DOES ...
-
-== Tcl ==
-
-{{{
-Tcl set x 0
-}}}
-
-The text after Tcl is passed unchanged to the Tcl interpreter.
-
---
-
-Note: The defining words are case tolerant. You can also write code, compiler, objecttype, tcl.
-However, the defined word names are case sensitive.
+*Documentation*:  http://www.tcl.tk/man/tcl/contents.htm .
