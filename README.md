@@ -4,9 +4,9 @@ TclForth applications run unchanged wherever Tcl runs, e.g. Windows, OS-X and Li
 
 #### TclForth Systems #
 
-  * [http://holonforth.com/tools/TclForth-WIN-05.zip TclForth-WIN-05.zip] - A selfcontained executable for MS Windows.
-  * [http://holonforth.com/tools/TclForth-OSX-05.zip TclForth-OSX-05.zip] -  A selfcontained executable for OS X.
-  * [http://holonforth.com/tools/TclForth-Source-052.zip TclForth-Source-052.zip] -  The source files.
+  * [TclForth-WIN-05.zip](http://holonforth.com/tools/TclForth-WIN-05.zip)  - A selfcontained executable for MS Windows.
+  * [TclForth-OSX-05.zip](http://holonforth.com/tools/TclForth-OSX-05.zip)  -  A selfcontained executable for OS X.
+  * [TclForth-Source-052.zip](http://holonforth.com/tools/TclForth-Source-052.zip)  -  The source files.
 
 
 #### Installation = Download and Unzip #
