@@ -10,9 +10,9 @@ The unzipped systems are immediately executable.
 
 #### Executables #
 
-The Windows and OS X executables are [http://wiki.tcl.tk/3663 starpacks]. They contain a Tcl runtime system for the platfom and a load routine for the TclForth source files. Double click the executable to start TclForth. 
+The Windows and OS X executables are [starpacks](http://wiki.tcl.tk/3663) . They contain a Tcl runtime system for the platfom and a load routine for the TclForth source files. Double click the executable to start TclForth. 
 
-You can also start TclForth loading the source files into an existing Tcl interpreter (wish) or a [http://wiki.tcl.tk/52 Tclkit], e.g. on another platform like Linux:
+You can also start TclForth loading the source files into an existing Tcl interpreter (wish) or a [Tclkit](http://wiki.tcl.tk/52), e.g. on another platform like Linux:
 ```
 cd <sourcedirectory>
 source tfmain.tcl
