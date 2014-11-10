@@ -20,4 +20,4 @@ source tfmain.tcl
 
 ####Source Files#
 
-Usually a starpack contains every part of the application including the source files. In TclForth the source files are handled externally, as they also serve as system documentation.
+Usually a starpack contains every part of the application including the source files. In the TclForth system the source files are handled externally, as they also serve as system documentation and let you easily change the system.
