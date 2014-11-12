@@ -200,6 +200,10 @@ Compiler {}
 \ Data Types  
 \ ===================================================================================
 
+Objecttype constant  
+	instance  {set obj [pop]}
+	{}        {push $obj}
+
 Objecttype variable  
 	instance  {set obj [pop]}
 	{}        {push $obj}
@@ -211,10 +215,6 @@ Objecttype variable
 	decr      {incr obj -1}
 	add	      {set obj [expr {$obj+[pop]}]}
 	print     {print $obj}
-
-Objecttype constant  
-	instance  {set obj [pop]}
-	{}        {push $obj}
 
 Objecttype array   
 	instance  {array set obj [pop]}
