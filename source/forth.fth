@@ -94,6 +94,9 @@ Code 2/ { n1 -- n2 }
 Code % { n1 n2 -- n3 }  
 	set n3 [expr {$n1%$n2}]
 
+Code mod { n1 n2 -- n3 }  
+	set n3 [expr {$n1%$n2}]
+
 Code int { n1 -- n2 } 
 	set n2 [expr int($n1)]
 
@@ -182,6 +185,12 @@ Compiler split
 Code uppercase? { c -- f }  
 	set f [regexp {[A-Z]} $c]
 
+Compiler [
+	appendcode "push \"\[ "
+
+Compiler ]
+	appendcode "drop \]\"; "
+
 Compiler {  PushList
 
 Compiler {} 
@@ -202,6 +211,10 @@ Objecttype variable
 	decr      {incr obj -1}
 	add	      {set obj [expr {$obj+[pop]}]}
 	print     {print $obj}
+
+Objecttype constant  
+	instance  {set obj [pop]}
+	{}        {push $obj}
 
 Objecttype array   
 	instance  {array set obj [pop]}
@@ -261,7 +274,7 @@ Objecttype list
 	clear     {set obj ""}
 	revert    {set obj [lrevert $obj]}
 	sort      {set obj [lsort $obj]}
-	join      {set obj [join $obj [pop]]}
+	join      {set obj [join $obj]}
 	print     {printnl $obj}
 	..        {printnl $obj}
 	search    {push [lsearch $obj [pop]]}
@@ -272,10 +285,12 @@ Objecttype file
 	{}        {@list $obj 1}   
 	handle    {@list $obj 1}
 	open-w    {push [open [lindex $obj 0] w]; !list obj 1 }
-	open-r    {push [open [lindex $obj 0] r]; !list obj 1 }
+	open-w    {push [open [lindex $obj 0] w]; !list obj 1 }
+	open      {push [open [lindex $obj 0] r]; !list obj 1 }
 	close     {close [lindex $obj 1]}
 	put       {puts [lindex $obj 1] [pop]}
 	get       {push [gets [lindex $obj 1]]}
+	read      {push [read [lindex $obj 1]]}
 	eof       {push [eof [lindex $obj 1]]}
 
 \ use: cast <variable> <type>
@@ -386,7 +401,7 @@ Compiler times
 \ ===================================================================================
 
 Compiler ."  
-	PushText appendcode "print \[pop\] ; "
+	PushText ; appendcode "printnl \[pop\] ; "
 
 \ Use . or .. - The compiler replaces . by .. with respect for Tk.
 Code .. { text -- }  
@@ -405,16 +420,20 @@ Code space { -- }
 	n times space repeat
 ;
 
-Code emit { c -- }  
-	print  [format %c $c]
+Code emit { a -- }  
+	print  [format %c $a]
 
-Code ascii { c -- a } 
-	binary scan $c "c" a
+\ Example: "A" ascii  ( -- 65 )
+Code ascii { s -- a } 
+	binary scan $s "c" a
 
+\ Returns the ASCII value of the first char. 
+\ Example:  asciiOf cdefg  ( -- 99 ) 
 Compiler asciiOf  
-	set c [GetItem]; set a [ascii $c]
-	appendcode "push $a ; "
+	push [GetItem]; ascii;
 
+\ Returns character c of ASCII value a 
+\ Example: 65 char ( -- A )
 Code char  { a -- c }  
 	set c [format %c $a]
 

@@ -6,13 +6,13 @@
 \
 
 : ConsoleWindows  { -- }
-	"TclForth Version 0.5" Title
+	"TclForth Version 0.52" Title
 	".forth" "text" Widget Console
 	"-padx 10 -pady 10 -relief sunken -border 1 -highlightcolor white" Console config   
 	"-expand 1 -fill both" Console pack
 	".code" "text" Widget CodeWindow
 	"-height 6 -pady 10 -padx 10 -relief sunken -border 1 -highlightcolor white" CodeWindow config  
-\	"-expand 0 -fill both" CodeWindow pack
+	"-expand 0 -fill both" CodeWindow pack
 ;
 
 \ ===================================================================================
@@ -202,7 +202,7 @@ Tcl bind . <Control-c> {ClearConsole; okprompt}
 Tcl bind . <Control-s> ClearStack
 
 Code HideTclConsole { -- }
-	console hide
+	catch {console hide}
 
 : ForthConsole { -- }
 	HideTclConsole
