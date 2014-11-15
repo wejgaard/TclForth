@@ -1,3 +1,5 @@
+#Compiler#
+
 Every TclForth word compiles itself. This is equivalent to the Tcl way of passing control to Tcl commands. The compiler/interpreter parses the next word from the source and passes control to the word.
 
 ### Proc, Code, Colon (:) ###
