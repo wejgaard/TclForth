@@ -1,16 +1,12 @@
 #TclForth#
 
-<a href="#source-files">source files</a>      
+TclForth is a Forth system that uses Tcl/Tk as its native language. The Forth source code is compiled to Tcl procedures for execution in the Tcl run time system. Tcl commands and Forth words coexist as a symbiosis of Tcl and Forth. TclForth applications run unchanged wherever Tcl runs, e.g. Windows, OS-X and Linux.
 
-TclForth is a Forth system that uses Tcl/Tk as its native language. The Forth source code is compiled to Tcl procedures for execution in the Tcl run time system. Tcl commands and Forth words coexist as a symbiosis of Tcl and Forth.
-
-TclForth applications run unchanged wherever Tcl runs, e.g. Windows, OS-X and Linux.
-
-#### Installation = Download and Unzip #
+# Installation = Download and Unzip #
 
 The unzipped systems are immediately executable.
 
-#### Executables #
+# Executables #
 
 The Windows and OS X executables are [starpacks](http://wiki.tcl.tk/3663) . They contain a Tcl runtime system for the platfom and a load routine for the TclForth source files. Double click the executable to start TclForth. 
 
@@ -21,6 +17,6 @@ cd <sourcedirectory>
 source tfmain.tcl
 ```
 
-####Source Files#
+#Source Files#
 
 Usually a starpack contains every part of the application including the source files. In the TclForth system the source files are handled externally, as they also serve as system documentation and let you easily change the system.
