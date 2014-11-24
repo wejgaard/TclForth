@@ -51,8 +51,8 @@ Code ImportForth {}
 : FileMenu { -- } 
 	".menubar.file" Menu fMenu
 	"File" fMenu Menubar addmenu
-	"Import .tcl" "ImportTcl" fMenu addcommand
-	"Import .fth" "ImportForth" fMenu addcommand
+	"Load .tcl" "ImportTcl" fMenu addcommand
+	"Load .fth" "ImportForth" fMenu addcommand
 ;
 
 : SetupMenu {}
@@ -62,8 +62,6 @@ Code ImportForth {}
 	"Show Codewindow" {pack $CodeWindow -expand 0 -fill both} sMenu addcommand
 	"Hide Codewindow" {pack forget $CodeWindow} sMenu addcommand
 	"Open Tcl console" {catch "console show"} sMenu addcommand
-	"Show stack" {set withStack 1; cr; okprompt } sMenu addcommand
-	"Hide stack" {set withStack 0; cr; okprompt } sMenu addcommand
 
 Code GetWords { -- fwords } 
 	set fwords [array names ::words]
