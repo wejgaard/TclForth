@@ -2,7 +2,7 @@ Compiler \  SkipLine
 
 \ File:    forth.fth
 \ Project: TclForth
-\ Version: 0.5
+\ Version: 0.55
 \ License: Tcl
 \ Author:  Wolf Wejgaard
 \

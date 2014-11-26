@@ -1,12 +1,12 @@
 \ File:    console.fth
 \ Project: TclForth
-\ Version: 0.5
+\ Version: 0.55
 \ License: Tcl
 \ Author:  Wolf Wejgaard
 \
 
 : ConsoleWindows  { -- }
-	"TclForth Version 0.52" Title
+	"TclForth Version 0.55" Title
 	".forth" "text" Widget Console
 	"-padx 10 -pady 10 -relief sunken -border 1 -highlightcolor white" Console config   
 	"-expand 1 -fill both" Console pack
@@ -83,11 +83,11 @@ Code openURL { webadr -- }
      }
 
 : HelpMenu {} 
-	".menubar.help" Menu hMenu
-	"Help" hMenu Menubar addmenu
-	"Words" {ShowWords; okprompt} hMenu addcommand
-	"TclForth" {push "http://code.google.com/p/tclforth/wiki/Introduction"; openURL} hMenu addcommand
-	"Tcl" {push "http://www.tcl.tk/man/tcl/contents.htm"; openURL} hMenu addcommand
+	".menubar.help" Menu helpMenu
+	"Help" helpMenu Menubar addmenu
+	"Words" {ShowWords; okprompt} helpMenu addcommand
+	"TclForth" {push "http://code.google.com/p/tclforth/wiki/Introduction"; openURL} helpMenu addcommand
+	"Tcl" {push "http://www.tcl.tk/man/tcl/contents.htm"; openURL} helpMenu addcommand
 
 : ConsoleMenu {}  
 	FileMenu 
