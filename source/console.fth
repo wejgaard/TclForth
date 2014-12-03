@@ -1,12 +1,12 @@
 \ File:    console.fth
 \ Project: TclForth
-\ Version: 0.55
+\ Version: 0.56
 \ License: Tcl
 \ Author:  Wolf Wejgaard
 \
 
 : ConsoleWindows  { -- }
-	"TclForth Version 0.55" Title
+	"TclForth Version 0.56" Title
 	".forth" "text" Widget Console
 	"-padx 10 -pady 10 -relief sunken -border 1 -highlightcolor white" Console config   
 	"-expand 1 -fill both" Console pack
@@ -59,6 +59,8 @@ Code ImportForth {}
 	".menubar.setup" Menu sMenu
 	"Setup" sMenu Menubar addmenu
 	"Clear Console" {ClearConsole; okprompt}	sMenu addcommand
+	"Show stack" {set withStack 1; cr; okprompt } sMenu addcommand
+	"Hide stack" {set withStack 0; cr; okprompt } sMenu addcommand
 	"Show Codewindow" {pack $CodeWindow -expand 0 -fill both} sMenu addcommand
 	"Hide Codewindow" {pack forget $CodeWindow} sMenu addcommand
 	"Open Tcl console" {catch "console show"} sMenu addcommand
@@ -83,11 +85,11 @@ Code openURL { webadr -- }
      }
 
 : HelpMenu {} 
-	".menubar.help" Menu helpMenu
-	"Help" helpMenu Menubar addmenu
-	"Words" {ShowWords; okprompt} helpMenu addcommand
-	"TclForth" {push "http://code.google.com/p/tclforth/wiki/Introduction"; openURL} helpMenu addcommand
-	"Tcl" {push "http://www.tcl.tk/man/tcl/contents.htm"; openURL} helpMenu addcommand
+	".menubar.help" Menu hMenu
+	"Help" hMenu Menubar addmenu
+	"TclForth Words" {ShowWords; okprompt} hMenu addcommand
+	"TclForth Guide" {push "http://code.google.com/p/tclforth/wiki/Introduction"; openURL} hMenu addcommand
+	"Tcl Commands" {push "http://www.tcl.tk/man/tcl/TclCmd/contents.htm"; openURL} hMenu addcommand
 
 : ConsoleMenu {}  
 	FileMenu 
@@ -215,6 +217,5 @@ Code HideTclConsole { -- }
 	Ctrl-S = ClearStack
 	Ctrl-C = ClearConsole\n" .cr	
 	okprompt
-	Console wait
 ;
 

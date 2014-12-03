@@ -1,6 +1,6 @@
 # File:    compiler.tcl
 # Project: TclForth
-# Version: 0.55
+# Version: 0.56
 # License: Tcl
 # Author:  Wolf Wejgaard  
 #
@@ -13,6 +13,8 @@ set comp(end) 0     ;# end of source text
 set comp(in) {}     ;# input parameters tcl code
 set comp(out) {}    ;# output parameters tcl code
 set comp(prev) 0    ;# saved current index
+set comp(imm) 0     ;# start of imm code
+set comp(icode) {}  ;# imm code
 
 proc GetItem {} {
 	global comp

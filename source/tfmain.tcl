@@ -1,6 +1,6 @@
 # File:    tfmain.tcl
 # Project: TclForth
-# Version: 0.55
+# Version: 0.56
 # License: Tcl
 # Author:  Wolf Wejgaard  
 #

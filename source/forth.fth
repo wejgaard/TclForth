@@ -2,7 +2,7 @@ Compiler \  SkipLine
 
 \ File:    forth.fth
 \ Project: TclForth
-\ Version: 0.55
+\ Version: 0.56
 \ License: Tcl
 \ Author:  Wolf Wejgaard
 \
@@ -185,12 +185,6 @@ Compiler split
 Code uppercase? { c -- f }  
 	set f [regexp {[A-Z]} $c]
 
-Compiler [
-	appendcode "push \"\[ "
-
-Compiler ]
-	appendcode "drop \]\"; "
-
 Compiler {  PushList
 
 Compiler {} 
@@ -214,28 +208,31 @@ Objecttype variable
 	incr      {incr obj}
 	decr      {incr obj -1}
 	add	      {set obj [expr {$obj+[pop]}]}
-	print     {print $obj}
+	print     {printnl $obj}
 
 Objecttype array   
 	instance  {array set obj [pop]}
 	{}        {push $obj([pop])}
 	get	      {push $obj([pop])}
 	set       {set obj([pop]) [pop]}
+	!         {set obj([pop]) [pop]}
 	incr      {incr obj([pop])}
 	add	      {incr obj([pop]) [pop]}
-	print     {print $obj([pop])}
+	print     {printnl $obj([pop])}
 	names     {push [array names obj]}
 
 Objecttype string   
 	instance  {set obj [pop]}
 	{}        {push $obj}
-	get       {push $obj}
 	set       {set obj [pop]}
+	!         {set obj [pop]}
 	index     {push [string index $obj [pop]]}
 	length    {push [string length $obj]}
 	tolower   {push [string tolower $obj]}
 	append    {append obj [pop]}
 	print     {printnl $obj}
+	first     {push [string first [pop] $obj]}
+	hexdump   {binary scan $obj H* hex; printnl [regexp -all -inline .. $hex]}
 
 proc @list {obj i} {
 	push [lindex $obj $i]
@@ -260,12 +257,9 @@ Objecttype list
 	instance  {set obj [pop]}
 	{}        {@list $obj [pop]}  
 	index     {@list $obj [pop]}
-	@         {@list $obj [pop]} 
-	put       {!list obj [pop]} 
 	set       {!list obj [pop]}  
 	!         {!list obj [pop]}   
 	getlist   {push $obj}  
-	get       {push $obj} 
 	setlist   {set obj [pop]}  
 	append    {lappend obj [pop]}
 	push      {lappend obj [pop]}
@@ -275,16 +269,13 @@ Objecttype list
 	revert    {set obj [lrevert $obj]}
 	sort      {set obj [lsort $obj]}
 	join      {set obj [join $obj]}
-	print     {printnl $obj}
-	..        {printnl $obj}
+	print     {printnl "{$obj}"} 
 	search    {push [lsearch $obj [pop]]}
 	last      {push [lindex $obj end]}
 
 Objecttype file  
 	instance  {set obj "[pop] handle" ; }
 	{}        {@list $obj 1}   
-	handle    {@list $obj 1}
-	open-w    {push [open [lindex $obj 0] w]; !list obj 1 }
 	open-w    {push [open [lindex $obj 0] w]; !list obj 1 }
 	open      {push [open [lindex $obj 0] r]; !list obj 1 }
 	close     {close [lindex $obj 1]}
