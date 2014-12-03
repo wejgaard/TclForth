@@ -1,4 +1,4 @@
-#Fusion of Tcl and Forth#
+##A Fusion of Tcl and Forth##
 
 
 
@@ -7,7 +7,7 @@ TclForth uses Tcl/Tk as its native language. The Forth source code is compiled t
 
 ##Features#
 
-* Universal desktop Forth, runs in Windows, OS-X, Linux, Solaris and AIX. 
+* Universal desktop Forth, runs in Windows, OS-X, Linux, Solaris and more. 
 * Native data types array, string, list, and dict.
 * Native local variables.
 * Native graphical toolkit based on Tk.
@@ -33,7 +33,5 @@ Tcl view:
 
 ##Guide
 
----
-*I am still working on the TclForth information. The initial version is available [here](https://code.google.com/p/tclforth/wiki/Tutorial) .*
+[Preliminary version](https://code.google.com/p/tclforth/wiki/Tutorial)
 
----
