@@ -1,7 +1,7 @@
 # File:    compiler.tcl
 # Project: TclForth
 # Version: 0.56
-# License: Tcl
+# License: Tcl  
 # Author:  Wolf Wejgaard  
 #
 

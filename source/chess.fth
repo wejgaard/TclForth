@@ -3,7 +3,7 @@
 \ Version: 0.56
 \ License: Tcl
 \ Author:  Wolf Wejgaard
-\ 
+\  
 \ A Forth version of Richard Suchenwirth's Chess in Tcl -- http://wiki.tcl.tk/4070
 \
 

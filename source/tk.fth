@@ -3,7 +3,7 @@
 \ Version: 0.56
 \ License: Tcl
 \ Author:  Wolf Wejgaard
-\ 
+\  
 
 tcl package require Tk
 
