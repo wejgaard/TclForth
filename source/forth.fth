@@ -185,6 +185,15 @@ Compiler split
 Code uppercase? { c -- f }  
 	set f [regexp {[A-Z]} $c]
 
+Compiler [
+	set comp(imm) [string length $comp(code)]
+
+Compiler ]
+	set comp(icode) [string range $comp(code) $comp(imm) [string length $comp(code)]]
+	incr comp(imm) -1
+	set comp(code) [string range $comp(code) 0 $comp(imm)]
+	eval $::comp(icode)
+
 Compiler {  PushList
 
 Compiler {} 
