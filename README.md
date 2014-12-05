@@ -1,7 +1,5 @@
 ##A Fusion of Tcl and Forth##
 
-
-
 TclForth uses Tcl/Tk as its native language. The Forth source code is compiled to Tcl procedures for execution in the Tcl run time system. Tcl commands and Forth words coexist as a symbiosis of Tcl and Forth. 
 
 
@@ -23,13 +21,15 @@ Tcl view:
 * Download (clone or zip) the repository.
 * Windows: Run tclforth.exe
 * OS-X: Run tclforth.app
+
+Both apps contain a Tcl runtime and a load routine for the TclForth source in the external source directory. 
+
 * Linux: Run tclforthx in a terminal or, if available, load tclsh. In the Tcl console:
 
 ```
     cd <source-directory>
     source tfmain.tcl
 ```
-
 
 ##Guide
 

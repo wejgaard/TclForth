@@ -401,7 +401,7 @@ Compiler times
 \ ===================================================================================
 
 Compiler ."  
-	PushText ; appendcode "printnl \[pop\] ; "
+	PushText ; appendcode "print \[pop\] ; "
 
 \ Use . or .. - The compiler replaces . by .. with respect for Tk.
 Code .. { text -- }  
