@@ -33,6 +33,6 @@ Both apps contain a Tcl runtime and a load routine for the TclForth source in th
 
 ###Guide
 
-[Wiki](https://github.com/wolfwejgaard/tclforth/wiki)
+[Wiki](https://github.com/wolfwejgaard/tclforth/wiki/tcl&forth)
 
 [Preliminary version](https://code.google.com/p/tclforth/wiki/Tutorial)
