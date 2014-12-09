@@ -1,7 +1,7 @@
 \ File:    console.fth
 \ Project: TclForth
 \ Version: 0.56
-\ License: Tcl 
+\ License: Tcl
 \ Author:  Wolf Wejgaard
 \
 
@@ -88,7 +88,7 @@ Code openURL { webadr -- }
 	".menubar.help" Menu hMenu
 	"Help" hMenu Menubar addmenu
 	"TclForth Words" {ShowWords; okprompt} hMenu addcommand
-	"TclForth Guide" {push "http://code.google.com/p/tclforth/wiki/Introduction"; openURL} hMenu addcommand
+	"TclForth Guide" {push "https://github.com/wolfwejgaard/tclforth/wiki"; openURL} hMenu addcommand
 	"Tcl Commands" {push "http://www.tcl.tk/man/tcl/TclCmd/contents.htm"; openURL} hMenu addcommand
 
 : ConsoleMenu {}  
