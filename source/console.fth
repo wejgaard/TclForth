@@ -1,12 +1,12 @@
 \ File:    console.fth
 \ Project: TclForth
-\ Version: 0.56
+\ Version: 0.57
 \ License: Tcl
 \ Author:  Wolf Wejgaard
 \
 
 : ConsoleWindows  { -- }
-	"TclForth Version 0.56" Title
+	"TclForth Version 0.57" Title
 	".forth" "text" Widget Console
 	"-padx 10 -pady 10 -relief sunken -border 1 -highlightcolor white" Console config   
 	"-expand 1 -fill both" Console pack
@@ -148,8 +148,8 @@ Code openURL { webadr -- }
 
 : okprompt { -- }
 	depth 0> withStack and
-	if   "($::stack) ok> " 
-	else "ok> " 
+	if   "($::stack) ok\n" 
+	else "ok\n" 
 	then Console append update 
 	Console insert comstart set
 	1.0 Console yview
@@ -159,35 +159,39 @@ Code openURL { webadr -- }
 \ Forth Console
 \ ===================================================================================
 
-Code GetLine { -- }  
-	global comp locals doi doj dok comstart 
-	array unset locals 	
-	set doi 0; set doj -1; set dok -2 
-	set comp(text) {}; 	set comp(code) {}; set comp(objtype) {}
-	set line [$::Console get "$comstart -1 chars" "insert lineend"]; 
-	set line [string trim $line]
-	set comp(text) $line;	set comp(i) 0; set comp(end) [string length $line]
-	push $line; SaveComline
-	$::Console insert end "\n"
-	return $comp(end)
-
 Code ShowCompCode { -- }
 	global comp
-	catch {
-		$::CodeWindow delete 1.0 end
-		$::CodeWindow insert 1.0 $comp(code)
-	}
+	$::CodeWindow insert end $comp(code)\n
 
 Code LoadLine { -- } 
 	InterpretText
 	ShowCompCode
 
-Code EvalLine { -- }
-	global comp
+Code EvalUnit {}
+	global comp unit
+	set unit [string trim $unit]; 
+	push $unit; SaveComline
+	set comp(text) $unit; set comp(i) 0; set comp(end) [string length $comp(text)]
+	if [catch LoadLine err]  {printnl "? $err"}
+
+Code EvalText { -- }  
+	global comp unit
+	set text [$::Console get "$::comstart -1 chars" "insert lineend"]; 
+	set text [string trim $text]; set textend [string length $text]
+	if {$text== ""} {okprompt; return}
+	set lines [split $text \n]
+	set unit ""
+	printnl ""
 	$::CodeWindow delete 1.0 end
-	if {[GetLine]} {
-		if [catch LoadLine err]  {printnl "? $err"; ShowCompCode}
+	foreach line $lines {
+		if {$line != ""} {
+			append unit \n $line 
+		} {
+			EvalUnit
+			set unit ""
+		}
 	}
+	EvalUnit
 	okprompt
 
 : ClearConsole { -- }
@@ -207,15 +211,13 @@ Code HideTclConsole { -- }
 : ForthConsole { -- }
 	HideTclConsole
 	ConsoleWindows
-	"<Return> {EvalLine; break}" Console bind   
+	"<Return> {EvalText; break}" Console bind   
 	"<Shift-Return> {cr; break}" Console bind       
 	"<Up> {PrevComline; break}"  Console bind
 	"<Down> {NextComline; break}" Console bind
 	ConsoleMenu
 	printforth
-	"Ctrl-W = ShowWords
-	Ctrl-S = ClearStack
-	Ctrl-C = ClearConsole\n" .cr	
+	"A Forth access to Tcl/Tk" .cr
 	okprompt
 ;
 

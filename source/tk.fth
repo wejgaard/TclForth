@@ -1,9 +1,9 @@
 \ File:    tk.fth
 \ Project: TclForth
-\ Version: 0.56
+\ Version: 0.57
 \ License: Tcl
 \ Author:  Wolf Wejgaard
-\  
+\ 
 
 tcl package require Tk
 
@@ -24,7 +24,7 @@ Objecttype Widget
 	append     {$obj insert end [pop] ; $obj mark set insert end}
 	delete     {swap ; $obj delete [pop] [pop]}
 	yview      {$obj yview moveto [pop]}
-	end        {push [$obj index end]}
+	end        {push [$obj index "end -1 char"]}
 	title      {wm title $obj [pop]}
 	add        {eval $obj [concat add [pop]]}
 

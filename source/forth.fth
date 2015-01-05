@@ -2,7 +2,7 @@ Compiler \  SkipLine
 
 \ File:    forth.fth
 \ Project: TclForth
-\ Version: 0.56
+\ Version: 0.57
 \ License: Tcl
 \ Author:  Wolf Wejgaard
 \ 
@@ -236,6 +236,7 @@ Objecttype string
 	set       {set obj [pop]}
 	!         {set obj [pop]}
 	index     {push [string index $obj [pop]]}
+	range     {swap; push [string range $obj [pop] [pop]]}
 	length    {push [string length $obj]}
 	tolower   {push [string tolower $obj]}
 	append    {append obj [pop]}

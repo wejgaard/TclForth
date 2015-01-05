@@ -1,7 +1,7 @@
 # File:    compiler.tcl
 # Project: TclForth
-# Version: 0.56
-# License: Tcl  
+# Version: 0.57
+# License: Tcl
 # Author:  Wolf Wejgaard  
 #
 
@@ -20,6 +20,7 @@ proc GetItem {} {
 	global comp
 	if {$comp(i)>=$comp(end)} {set comp(word) "" ; return $comp(word)}
 	set reg [regexp -indices -start $comp(i)  {\S+} $comp(text) range]
+# if $reg==0 {set comp(word) "", return $comp(word)} 
 	set start [lindex $range 0]
 	set end [lindex $range 1]
 	set comp(word) [string range $comp(text) $start $end ] 
@@ -40,18 +41,13 @@ proc EmptyLine {} {
 # Next program unit. 
 # A unit is a block of source text terminated by an empty line
 proc GetUnit {} {
-	global f line
+	global f line comp
 	while {[EmptyLine]&&[eof $f]==0} {}
 	set code $line	
 	while { ![EmptyLine]  && [eof $f]==0} {
 		set code $code\n$line
 	}
-	return $code
-}
-
-proc GetText {} {
-	global comp
-	set comp(text) [GetUnit]
+	set comp(text) $code
 	set comp(end) [string length $comp(text)]
 	set comp(i) 0
 }
@@ -82,8 +78,8 @@ proc MakeCode {} {
 proc MakeCompiler {} {
 	global comp words
 	GetItem
-	set compcode [string range $comp(text) $comp(i) $comp(end)]
-	set words($comp(word)) [string trimleft $compcode]
+	set comptext [string range $comp(text) $comp(i) $comp(end)]
+	set words($comp(word)) [string trimleft $comptext]
 }
 
 proc MakeColon {} {
@@ -171,7 +167,7 @@ proc appendcode {code} {
 	append comp(code) $code
 }
 
-# Called by definer objecttype in InterpretText 
+# Called by definer objecttype.
 # Creates an objecttype array. 
 # The indices are messages, the values are method scripts.
 # Example use:
@@ -323,8 +319,17 @@ proc ShowCompCode {} {
 	puts $::comp(code)
 }
 
+proc SetupInterpreter {} {
+	global comp view locals doi doj dok 
+	array unset locals
+	set doi 0; set doj -1; set dok -2  
+	set comp(code) {}; set comp(objtype) {}
+}
+
 proc InterpretText {} {
-	set definer [string tolower [GetItem]]
+	global definer  
+	SetupInterpreter
+	set definer [string tolower [ GetItem ]]
 	switch $definer {
 		proc MakeProc
 		tcl EvalTcl
@@ -339,20 +344,15 @@ proc InterpretText {} {
 }
 
 proc LoadUnit {} {
-	global definer comp view locals doi doj dok target
-	array unset locals
-	set doi 0; set doj -1; set dok -2  
-	set comp(code) {}
-	set comp(objtype) {}
-	GetText 
 	InterpretText
-	puts $comp(code)\n
+	puts $::comp(code)\n
 }
 
 proc LoadForth {file} {
 	global f
 	set f [open $file r]; 	fconfigure $f -encoding binary
 	while {[eof $f]==0} { 	
+		GetUnit
 		LoadUnit
 	}
 	close $f
