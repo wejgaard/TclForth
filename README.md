@@ -34,3 +34,26 @@ Both apps contain a Tcl runtime and a load routine for the TclForth source in th
 ###Guide
 
 See the [Wiki](https://github.com/wolfwejgaard/tclforth/wiki)
+
+###Release Notes
+
+####Version 0.57
+
+* Console: New prompt, command line starts at the left border
+* Console: Accepts pasting of source with multiple units/definitions 
+* Forth: Command 'range' added to strings
+* Wiki: updated
+
+####Version 0.56
+
+* Console: Continue the command string on a new line with <Ctrl+Enter>
+* Console: Put immediate action on the command line inside [ ]
+* Tcl: If TclForth is started in a terminal, the terminal becomes the Tcl console (e.g. Linux)
+* Forth: Word 'mod' added (alias of %) 
+* Debugged: list join ,   ."
+
+
+
+
+
+
