@@ -53,7 +53,7 @@ See the [Wiki](https://github.com/wolfwejgaard/tclforth/wiki)
 * Console: Put immediate action on the command line inside [ ]
 * Tcl: If TclForth is started in a terminal, the terminal becomes the Tcl console (e.g. Linux)
 * Forth: Word 'mod' added (alias of %) 
-* Debugged: list join ,   ."
+* Debugged: list join ,   ."  
 
 
 
