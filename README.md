@@ -48,7 +48,7 @@ See the [Wiki](https://github.com/wolfwejgaard/tclforth/wiki)
 
 #####Version 0.56
 
-* Console: Continue the command string on a new line with <Ctrl+Enter>
+* Console: Continue the command string on a new line with \<Ctrl+Enter\>
 * Console: Put immediate action on the command line inside [ ]
 * Tcl: If TclForth is started in a terminal, the terminal becomes the Tcl console (e.g. Linux)
 * Forth: Word 'mod' added (alias of %) 
