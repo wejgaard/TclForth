@@ -36,6 +36,10 @@ Both apps contain a Tcl runtime and a load routine for the TclForth source in th
 
 See the [Wiki](https://github.com/wolfwejgaard/tclforth/wiki)
 
+####Community
+
+[TclForth Discussion Group](https://groups.google.com/forum/#!forum/tclforth).
+
 ---
 
 ####Release Notes
