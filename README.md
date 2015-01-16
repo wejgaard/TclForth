@@ -1,7 +1,6 @@
-###A multi-platform desktop Forth based on Tcl/Tk  
-Version 0.57
+###TclForth  
 
-TclForth uses Tcl/Tk as its native language. The Forth source code is compiled to Tcl procedures for execution in the Tcl run time system. Tcl commands and Forth words coexist as a symbiosis of Tcl and Forth. 
+A multi-platform desktop Forth based on Tcl/Tk. TclForth uses Tcl/Tk as its native language. The Forth source code is compiled to Tcl procedures for execution in the Tcl run time system. Tcl commands and Forth words coexist as a symbiosis of Tcl and Forth. 
 
 
 ####Features#
@@ -32,13 +31,16 @@ Both apps contain a Tcl runtime and a load routine for the TclForth source in th
     source tfmain.tcl
 ```
 
-####Guide
+####Documentation
 
 See the [Wiki](https://github.com/wolfwejgaard/tclforth/wiki)
 
-####Community
+####Discussion
 
-[TclForth Discussion Group](https://groups.google.com/forum/#!forum/tclforth).
+Please open an issue. 
+
+
+
 
 ---
 
