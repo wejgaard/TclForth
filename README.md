@@ -20,7 +20,8 @@ Tcl view
 * Concatenative/postfix notation.
 
 ####Installation
-* Download (clone or zip) the repository.
+[Download the latest release](https://github.com/wolfwejgaard/tclforth/releases)
+
 * Windows: Run tclforth.exe
 * OS-X: Run tclforth.app
 
