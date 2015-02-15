@@ -1,6 +1,6 @@
 # File:    compiler.tcl
 # Project: TclForth
-# Version: 0.57
+# Version: 0.6.0
 # License: Tcl
 # Author:  Wolf Wejgaard  
 #
@@ -365,5 +365,60 @@ proc print {text} {
 
 proc printnl {text} {
 	puts $text
+}
+
+set MonitorFile ../../holon.mon
+
+proc LastAccess {} {
+	global MonitorFile
+	if {[file exists $MonitorFile]} {
+		file stat $MonitorFile status
+		return $status(mtime)
+	} {
+		return 0
+	}
+}
+
+set LastRead 0
+
+proc Monitor {} {
+	global LastRead errorInfo
+	if {$LastRead != [LastAccess]} {
+		set LastRead [LastAccess]
+		if {[catch DoIt result]} {
+			puts "Error: $errorInfo"
+		}
+	}
+	after 200 Monitor
+}
+
+proc LoadInConsole {file} {
+	global f Console comstart
+	set f [open $file r]; 	fconfigure $f -encoding binary
+	$Console insert $comstart [read $f]\n
+	close $f
+}
+
+proc DoIt {} {
+	global MonitorFile
+#	set result [uplevel #0 {eval {source $MonitorFile}}]
+#	set result [uplevel #0 {eval { LoadForth $MonitorFile}}]
+	set result [uplevel #0 {eval { LoadInConsole $MonitorFile}}]
+#	puts $result
+#	SendMonitor $result
+	EvalText
+}
+
+proc SendMonitor {text} {
+	set f [open $::MonitorFile w]
+	fconfigure $f -encoding binary
+	puts $f "$text\n"
+	close $f
+}
+
+proc StartMonitor {} {
+	global LastRead
+	set LastRead [LastAccess]
+	Monitor
 }
 

@@ -1,12 +1,12 @@
 \ File:    console.fth
 \ Project: TclForth
-\ Version: 0.57
+\ Version: 0.6.0
 \ License: Tcl
 \ Author:  Wolf Wejgaard
 \
 
 : ConsoleWindows  { -- }
-	"TclForth Version 0.57" Title
+	"TclForth Version 0.6.0" Title
 	".forth" "text" Widget Console
 	"-padx 10 -pady 10 -relief sunken -border 1 -highlightcolor white" Console config   
 	"-expand 1 -fill both" Console pack
@@ -217,7 +217,10 @@ Code HideTclConsole { -- }
 	"<Down> {NextComline; break}" Console bind
 	ConsoleMenu
 	printforth
-	"A Forth access to Tcl/Tk" .cr
+	"Ctrl-C = Clear Console" .cr
+	"Ctrl-S = Clear Stack" .cr
+	"Ctrl-W = Show Words" .cr
+	"--" .cr 	
 	okprompt
 ;
 

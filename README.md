@@ -1,6 +1,6 @@
-##TclForth  
+##TclForth
 
-A multi-platform desktop Forth based on Tcl/Tk. - Version 0.57 
+A multi-platform desktop Forth. - Version 0.6.0
 
 ####Overview
 TclForth uses Tcl/Tk as its native language. The Forth source code is compiled to Tcl procedures for execution in the Tcl run time system. Tcl commands and Forth words coexist as a symbiosis of Tcl and Forth. 
@@ -8,7 +8,7 @@ TclForth uses Tcl/Tk as its native language. The Forth source code is compiled t
 
 ####Features#
 
-* Universal desktop Forth, runs in Windows, OS-X, Linux, Solaris and more. 
+* Universal desktop Forth, runs in Windows, OS-X, Linux, and more. 
 * Native data types array, string, list, and dict.
 * Native local variables.
 * Native graphical toolkit based on Tk.
@@ -16,16 +16,21 @@ TclForth uses Tcl/Tk as its native language. The Forth source code is compiled t
 * TclForth is provided as desktop apps for Windows and OS-X
 
 Tcl view
+
 * Arguments and results are transferred on a parameter stack. 
 * Concatenative/postfix notation.
 
 ####Installation
-[Download the latest release](https://github.com/wolfwejgaard/tclforth/releases)
+[Download the appropriate release and the source code](https://github.com/wolfwejgaard/tclforth/releases) 
 
+* Store the executable together with the source folder.
 * Windows: Run tclforth.exe
 * OS-X: Run tclforth.app
 
-Both apps contain a Tcl runtime and a load routine for the TclForth source in the external source directory. 
+Both executables contain a Tcl runtime and a load routine for the TclForth source.
+
+
+
 
 * Linux: Run tclforthx in a terminal or, if available, load tclsh. In the Tcl console:
 
@@ -44,9 +49,15 @@ https://groups.google.com/forum/#!forum/tclforth
 
 
 
-####Release Notes
+###Release Notes
 
-######Version 0.57
+#####Version 0.6.0
+
+* Adapted to GitHub conventions:
+* The TclForth systems are now provided as releases.
+* Semantic versioning.
+
+#####Version 0.57
 
 * Console: New prompt, command line starts at the left border
 * Console: Accepts pasting of source with multiple units/definitions 
