@@ -1,6 +1,6 @@
 ##TclForth
 
-A multi-platform desktop Forth.
+A multi-platform desktop Forth. - Version 0.6.0
 
 ####Overview
 TclForth uses Tcl/Tk as its native language. The Forth source code is compiled to Tcl procedures for execution in the Tcl run time system. Tcl commands and Forth words coexist as a symbiosis of Tcl and Forth. 
@@ -21,16 +21,13 @@ Tcl view
 * Concatenative/postfix notation.
 
 ####Installation
-[Download the appropriate release and the source code](https://github.com/wolfwejgaard/tclforth/releases) 
+[Download the appropriate executable and the source code](https://github.com/wolfwejgaard/tclforth/releases) 
 
 * Store the executable together with the source folder.
 * Windows: Run tclforth.exe
 * OS-X: Run tclforth.app
 
 Both executables contain a Tcl runtime and a load routine for the TclForth source.
-
-
-
 
 * Linux: Run tclforthx in a terminal or, if available, load tclsh. In the Tcl console:
 
