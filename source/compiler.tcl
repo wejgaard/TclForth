@@ -3,7 +3,7 @@
 # Version: 0.6.0
 # License: Tcl
 # Author:  Wolf Wejgaard  
-#
+# 
 
 set comp(text) {}   ;# source text of the unit
 set comp(code) {}   ;# compiled tcl code

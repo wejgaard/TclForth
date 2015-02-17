@@ -3,7 +3,7 @@
 \ Version: 0.6.0
 \ License: Tcl
 \ Author:  Wolf Wejgaard
-\
+\ 
 
 : ConsoleWindows  { -- }
 	"TclForth Version 0.6.0" Title

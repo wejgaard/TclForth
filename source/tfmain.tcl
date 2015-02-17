@@ -1,9 +1,9 @@
 # File:    tfmain.tcl
 # Project: TclForth
-# Version: 0.56
+# Version: 0.6.0
 # License: Tcl
 # Author:  Wolf Wejgaard  
-#
+# 
 
 package require Tk
 catch {console show}
