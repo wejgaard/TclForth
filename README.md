@@ -20,16 +20,29 @@ Tcl view
 * Arguments and results are transferred on a parameter stack. 
 * Concatenative/postfix notation.
 
-####Installation
-[Download the appropriate executable and the source code](https://github.com/wolfwejgaard/tclforth/releases) 
+###Installation
 
-* Store the executable together with the source folder.
+TclForth is provided in two versions.
+
+####Autonomous Version: [Release 0.6.1](https://github.com/wolfwejgaard/tclforth/releases) 
+
+The executables are Tcl Starpacks with TclForth version 0.6.0.
+
+* TclForth060.exe for Windows
+* TclForth060.app for OS-X
+
+
+
+####Experimental Version: [Release 0.6.0](https://github.com/wolfwejgaard/tclforth/releases) 
+
+The executables for Windows and OS-X contain a Tcl runtime and a load routine for the external TclForth source. This allows easy changes of the systems.
+
+* Download the executable and the source code
+* Store the executable together with the source *folder*.
 * Windows: Run tclforth.exe
 * OS-X: Run tclforth.app
 
-Both executables contain a Tcl runtime and a load routine for the TclForth source.
-
-* Linux: Run tclforthx in a terminal or, if available, load tclsh. In the Tcl console:
+* Linux: Start tclforthx in a terminal. In the Tcl console:
 
 ```
     cd <source-directory>
