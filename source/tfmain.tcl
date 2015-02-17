@@ -1,7 +1,7 @@
 # File:    tfmain.tcl
 # Project: TclForth
 # Version: 0.56
-# License: Tcl 
+# License: Tcl
 # Author:  Wolf Wejgaard  
 #
 
@@ -16,5 +16,10 @@ LoadForth tk.fth
 
 LoadForth console.fth
 
+if [namespace exists starkit] {
+	cd ../../
+	if [osx] {cd ../../../}
+}
+StartMonitor
 ForthConsole
 

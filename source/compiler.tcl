@@ -367,7 +367,11 @@ proc printnl {text} {
 	puts $text
 }
 
-set MonitorFile ../../holon.mon
+proc osx {} {
+	if {$::tcl_platform(os)=="Darwin"} {return true} {return false}
+}
+
+set MonitorFile ./holon.mon
 
 proc LastAccess {} {
 	global MonitorFile
@@ -393,16 +397,14 @@ proc Monitor {} {
 }
 
 proc LoadInConsole {file} {
-	global f Console comstart
+	global f Console comstart montext
 	set f [open $file r]; 	fconfigure $f -encoding binary
-	$Console insert $comstart [read $f]\n
+	$Console insert $comstart [read $f]
 	close $f
 }
 
 proc DoIt {} {
 	global MonitorFile
-#	set result [uplevel #0 {eval {source $MonitorFile}}]
-#	set result [uplevel #0 {eval { LoadForth $MonitorFile}}]
 	set result [uplevel #0 {eval { LoadInConsole $MonitorFile}}]
 #	puts $result
 #	SendMonitor $result
@@ -420,5 +422,10 @@ proc StartMonitor {} {
 	global LastRead
 	set LastRead [LastAccess]
 	Monitor
+}
+
+proc PrintMontext {} {
+	global montext
+	printnl $montext
 }
 
