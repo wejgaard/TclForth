@@ -51,12 +51,11 @@ The executables for Windows and OS-X contain a Tcl runtime and a load routine fo
 
 ####Guide
 
-See the [Wiki](https://github.com/wolfwejgaard/tclforth/wiki)
+See the [Wiki](https://github.com/wolfwejgaard/tclforth/wiki).
 
 ####Forum
 
-https://groups.google.com/forum/#!forum/tclforth
-
+See the [Issues](https://github.com/wolfwejgaard/tclforth/issues).
 
 
 ###Release Notes
