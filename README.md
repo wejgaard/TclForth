@@ -1,4 +1,4 @@
-##TclForth
+## TclForth
 
 A multi-platform desktop Forth. - Version 0.6.1
 
@@ -6,7 +6,7 @@ A multi-platform desktop Forth. - Version 0.6.1
 TclForth uses Tcl/Tk as its native language. The Forth source code is compiled to Tcl procedures for execution in the Tcl run time system. Tcl commands and Forth words coexist as a symbiosis of Tcl and Forth. 
 
 
-####Features#
+#### Features
 
 * Universal desktop Forth, runs in Windows, OS-X, Linux, and more. 
 * Native data types array, string, list, and dict.
@@ -20,11 +20,11 @@ Tcl view
 * Arguments and results are transferred on a parameter stack. 
 * Concatenative/postfix notation.
 
-###Installation
+### Installation
 
 TclForth is provided in two versions.
 
-####Autonomous Version: [Release 0.6.1](https://github.com/wolfwejgaard/tclforth/releases) 
+#### Autonomous Version: [Release 0.6.1](https://github.com/wolfwejgaard/tclforth/releases) 
 
 The executables are Tcl Starpacks with TclForth version 0.6.0.
 
@@ -33,7 +33,7 @@ The executables are Tcl Starpacks with TclForth version 0.6.0.
 
 
 
-####Experimental Version: [Release 0.6.0](https://github.com/wolfwejgaard/tclforth/releases) 
+#### Experimental Version: [Release 0.6.0](https://github.com/wolfwejgaard/tclforth/releases) 
 
 The executables for Windows and OS-X contain a Tcl runtime and a load routine for the external TclForth source. This allows easy changes of the systems.
 
@@ -49,31 +49,31 @@ The executables for Windows and OS-X contain a Tcl runtime and a load routine fo
     source tfmain.tcl
 ```
 
-####Guide
+#### Guide
 
 See the [Wiki](https://github.com/wolfwejgaard/tclforth/wiki).
 
-####Forum
+#### Forum
 
 See the [Issues](https://github.com/wolfwejgaard/tclforth/issues).
 
 
-###Release Notes
+### Release Notes
 
-#####Version 0.6.0
+##### Version 0.6.0
 
 * Adapted to GitHub conventions:
 * The TclForth systems are now provided as releases.
 * Semantic versioning.
 
-#####Version 0.57
+##### Version 0.57
 
 * Console: New prompt, command line starts at the left border
 * Console: Accepts pasting of source with multiple units/definitions 
 * Forth: Command 'range' added to strings
 * Wiki: updated
 
-######Version 0.56
+###### Version 0.56
 
 * Console: Continue the command string on a new line with \<Ctrl+Enter\>
 * Console: Put immediate action on the command line inside [ ]
