@@ -22,20 +22,10 @@ Tcl view
 
 ### Installation
 
-TclForth is provided in two versions.
+[Release 0.6.0](https://github.com/wolfwejgaard/tclforth/releases) 
 
-#### Autonomous Version: [Release 0.6.1](https://github.com/wolfwejgaard/tclforth/releases) 
-
-The executables are Tcl Starpacks with TclForth version 0.6.0.
-
-* TclForth060.exe for Windows
-* TclForth060.app for OS-X
-
-
-
-#### Experimental Version: [Release 0.6.0](https://github.com/wolfwejgaard/tclforth/releases) 
-
-The executables for Windows and OS-X contain a Tcl runtime and a load routine for the external TclForth source. This allows easy changes of the systems.
+The executables for Windows and OS-X contain a Tcl runtime and a load routine 
+for the external TclForth source. This allows easy changes of the systems.
 
 * Download the executable and the source code
 * Store the executable together with the source *folder*.
