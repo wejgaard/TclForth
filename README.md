@@ -24,15 +24,15 @@ Tcl view
 
 [Release 0.6.0](https://github.com/wolfwejgaard/tclforth/releases) 
 
-The executables for Windows and OS-X contain a Tcl runtime and a load routine 
-for the external TclForth source. This allows easy changes of the systems.
+The executables for Windows and OS-X contain a Tcl runtime system and a load routine 
+for the TclForth source. This allows local changes of the systems.
 
 * Download the executable and the source code
-* Store the executable together with the source *folder*.
+* Store the executable together with the source folder.
 * Windows: Run tclforth.exe
 * OS-X: Run tclforth.app
 
-* Linux: Start tclforthx in a terminal. In the Tcl console:
+* Linux: Start tclforthx in a terminal. - In the Tcl console:
 
 ```
     cd <source-directory>
@@ -53,7 +53,7 @@ See the [Issues](https://github.com/wolfwejgaard/tclforth/issues).
 ##### Version 0.6.0
 
 * Adapted to GitHub conventions:
-* The TclForth systems are now provided as releases.
+* The TclForth systems are provided as releases.
 * Semantic versioning.
 
 ##### Version 0.57
