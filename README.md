@@ -2,11 +2,11 @@
 
 A multi-platform desktop Forth system. 
 
-## Overview
+### Overview
 TclForth uses Tcl/Tk as its native language. The Forth source code is compiled to Tcl procedures for execution in the Tcl run time system. Tcl commands and Forth words coexist as a symbiosis of Tcl and Forth. 
 
 
-## Features
+### Features
 
 * Universal desktop Forth, runs in Windows, OS-X, Linux, and more. 
 * Native data types array, string, list, and dict.
@@ -18,9 +18,9 @@ TclForth uses Tcl/Tk as its native language. The Forth source code is compiled t
 * Arguments and results are transferred on a parameter stack. 
 * Concatenative/postfix notation.
 
-## [Release 0.7.0](https://github.com/wolfwejgaard/tclforth/releases) 
+### [Release 0.7.0](https://github.com/wolfwejgaard/tclforth/releases) 
 
-The provided system contains the TclForth source files as well as Tcl executables for Windows and OS-X, and shell code for Linux.
+The zip archive contains the TclForth source files as well as Tcl executables for Windows and OS-X, and shell code for Linux.
 
 * Windows: Run tclforth.exe
 * OS-X: Run tclforth.app
@@ -31,7 +31,7 @@ The provided system contains the TclForth source files as well as Tcl executable
     source tfmain.tcl
 ```
 
-## Release Notes 
+### Release Notes 
 
 * Console: Accepts pasting of source with multiple units/definitions 
 * Console: Continue the command string on a new line with \<Ctrl+Enter\>
@@ -39,9 +39,8 @@ The provided system contains the TclForth source files as well as Tcl executable
 
 * If TclForth is started in a terminal, the terminal is the Tcl console.
 
+### [Guide](https://github.com/wolfwejgaard/tclforth/wiki)
 
-
-## [Guide](https://github.com/wolfwejgaard/tclforth/wiki)
 
 
 
