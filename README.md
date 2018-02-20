@@ -13,7 +13,7 @@ TclForth uses Tcl/Tk as its native language. The Forth source code is compiled t
 * Native local variables.
 * Native graphical toolkit based on Tk.
 * Native database (Metakit).
-* TclForth is provided as desktop apps for Windows and OS-X
+* Desktop apps for Windows and OS-X
 ### Changes in Tcl
 * Arguments and results are transferred on a parameter stack. 
 * Concatenative/postfix notation.
