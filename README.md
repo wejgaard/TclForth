@@ -35,11 +35,6 @@ The provided system contains the TclForth source files as well as Tcl executable
 
 ### [Guide](https://github.com/wolfwejgaard/tclforth/wiki)
 
-### [Comments](https://github.com/wolfwejgaard/tclforth/issues)
-
-
-
-
 ## Release Notes 
 
 * Console: Accepts pasting of source with multiple units/definitions 
@@ -47,6 +42,10 @@ The provided system contains the TclForth source files as well as Tcl executable
 * Console: Put immediate action on the command line inside [ ]
 
 * If TclForth is started in a terminal, the terminal is the Tcl console.
+
+
+### [Comments](https://github.com/wolfwejgaard/tclforth/issues)
+
 
 
 
