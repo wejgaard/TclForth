@@ -24,8 +24,8 @@ The provided system contains the TclForth source files as well as Tcl executable
 
 * Windows: Run tclforth.exe
 * OS-X: Run tclforth.app
-* Linux: Run tclforthx in a terminal. 
-- In the Tcl console:
+* Linux: Run tclforthx in a terminal. In the Tcl console:
+
 ```
     cd <source-directory>
     source tfmain.tcl
@@ -37,7 +37,7 @@ The provided system contains the TclForth source files as well as Tcl executable
 * Console: Continue the command string on a new line with \<Ctrl+Enter\>
 * Console: Put immediate action on the command line inside [ ]
 
-* If TclForth is started in a terminal, the terminal becomes the Tcl console.
+* If TclForth is started in a terminal, the terminal is the Tcl console.
 
 
 ## [Wiki/Guide](https://github.com/wolfwejgaard/tclforth/wiki)
