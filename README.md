@@ -39,13 +39,9 @@ for the TclForth source. This allows local changes of the systems.
     source tfmain.tcl
 ```
 
-#### Guide
+#### [Wiki/Guide](https://github.com/wolfwejgaard/tclforth/wiki).
 
-See the [Wiki](https://github.com/wolfwejgaard/tclforth/wiki).
-
-#### Forum
-
-See the [Issues](https://github.com/wolfwejgaard/tclforth/issues).
+#### [Comments/Issues](https://github.com/wolfwejgaard/tclforth/issues).
 
 
 ### Release Notes
