@@ -31,13 +31,6 @@ The provided system contains the TclForth source files as well as Tcl executable
     source tfmain.tcl
 ```
 
-## Release Notes 
-
-* Console: Accepts pasting of source with multiple units/definitions 
-* Console: Continue the command string on a new line with \<Ctrl+Enter\>
-* Console: Put immediate action on the command line inside [ ]
-
-* If TclForth is started in a terminal, the terminal is the Tcl console.
 
 
 ### [Guide](https://github.com/wolfwejgaard/tclforth/wiki)
@@ -45,6 +38,15 @@ The provided system contains the TclForth source files as well as Tcl executable
 ### [Comments](https://github.com/wolfwejgaard/tclforth/issues)
 
 
+
+
+## Release Notes 
+
+* Console: Accepts pasting of source with multiple units/definitions 
+* Console: Continue the command string on a new line with \<Ctrl+Enter\>
+* Console: Put immediate action on the command line inside [ ]
+
+* If TclForth is started in a terminal, the terminal is the Tcl console.
 
 
 
