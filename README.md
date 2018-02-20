@@ -8,7 +8,7 @@ TclForth uses Tcl/Tk as its native language. The Forth source code is compiled t
 
 ### Features
 
-* Universal desktop Forth, runs in Windows, OS-X, Linux, and more. 
+* Universal desktop Forth, runs unchanged in Windows, OS-X, Linux, and more. 
 * Native data types array, string, list, and dict.
 * Native local variables.
 * Native graphical toolkit based on Tk.
