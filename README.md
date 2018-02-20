@@ -40,9 +40,9 @@ The provided system contains the TclForth source files as well as Tcl executable
 * If TclForth is started in a terminal, the terminal is the Tcl console.
 
 
-## [Wiki/Guide](https://github.com/wolfwejgaard/tclforth/wiki)
+### [Wiki=Guide](https://github.com/wolfwejgaard/tclforth/wiki)
 
-## [Comments/Issues](https://github.com/wolfwejgaard/tclforth/issues)
+### [Comments=Issues](https://github.com/wolfwejgaard/tclforth/issues)
 
 
 
