@@ -3,10 +3,10 @@
 \ Version: 0.6.0
 \ License: Tcl
 \ Author:  Wolf Wejgaard
-\ 
+\
 
 : ConsoleWindows  { -- }
-	"TclForth Version 0.6.0" Title
+	"TclForth Version 0.7.0" Title
 	".forth" "text" Widget Console
 	"-padx 10 -pady 10 -relief sunken -border 1 -highlightcolor white" Console config   
 	"-expand 1 -fill both" Console pack
@@ -168,11 +168,12 @@ Code LoadLine { -- }
 	ShowCompCode
 
 Code EvalUnit {}
-	global comp unit
+	global comp unit errorInfo
 	set unit [string trim $unit]; 
 	push $unit; SaveComline
 	set comp(text) $unit; set comp(i) 0; set comp(end) [string length $comp(text)]
 	if [catch LoadLine err]  {printnl "? $err"}
+#	if [catch LoadLine]  {print $errorInfo}
 
 Code EvalText { -- }  
 	global comp unit

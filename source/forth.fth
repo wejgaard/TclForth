@@ -383,10 +383,19 @@ Compiler +loop
 Compiler I  
 	appendcode "push \$_i$::doi; "
 
+Compiler i  
+	appendcode "push \$_i$::doi; "
+
 Compiler J 
 	appendcode "push \$_i$::doj; "
 
-Compiler K 
+Compiler j
+	appendcode "push \$_i$::doj; "
+
+Compiler K
+	appendcode "push \$_i$::dok; "
+
+Compiler k 
 	appendcode "push \$_i$::dok; "
 
 Compiler leave 
