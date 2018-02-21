@@ -18,7 +18,7 @@ TclForth uses Tcl/Tk as its native language. The Forth source code is compiled t
 * Arguments and results are transferred on a parameter stack. 
 * Concatenative/postfix notation.
 
-### [Release 0.7.0](https://github.com/wolfwejgaard/tclforth/releases) 
+### [Release v0.7.0](https://github.com/wolfwejgaard/tclforth/releases) 
 
 The zip archive contains the TclForth source files as well as Tcl executables for Windows and OS-X, and shell code for Linux.
 
