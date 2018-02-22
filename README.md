@@ -19,15 +19,15 @@ Tcl/Tk is a great and much underrated software universe http://www.tcl.tk/about/
 * Desktop apps for Windows and OS-X
 
 ### Guide
-The [Wiki](https://github.com/wejgaard/tclforth/wiki) is a good place for the the Users Guide. TclForth is special but it all makes sense. 
+The [Wiki](https://github.com/wejgaard/tclforth/wiki) is a good place for the Users Guide. TclForth is special but it all makes sense. And can be experienced interactively.
 
 ### Comments 
-Use the [Issues](https://github.com/wolfwejgaard/tclforth/issues) for Comments, Questions, Ideas. 
+Use the [Issues](https://github.com/wejgaard/tclforth/issues) for Comments, Questions, Ideas. 
 
 
 ### [Release v0.7.0](https://github.com/wolfwejgaard/tclforth/releases) 
 
-The zip archive contains the TclForth source files as well as Tcl executables for Windows and OS-X, and shell code for Linux.
+The TclForth.zip archive contains the TclForth source files as well as Tcl executables for Windows and OS-X, and shell code for Linux.
 
 * Windows: Run tclforth.exe
 * OS-X: Run tclforth.app
