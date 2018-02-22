@@ -20,7 +20,7 @@ Tcl/Tk is a great and much underrated software universe http://www.tcl.tk/about/
 * Desktop apps for Windows and OS-X
 
 ### Guide
-The [Wiki](https://github.com/wejgaard/tclforth/wiki) is a good place for the Users Guide. TclForth is special but it all makes sense. And can be experienced interactively.
+The [Wiki](https://github.com/wejgaard/tclforth/wiki) is a good place for the Users Guide. TclForth is special but it all makes sense. And you can experience it interactively.
 
 ### Comments 
 Use the [Issues](https://github.com/wejgaard/tclforth/issues) for Comments, Questions, Ideas. 
