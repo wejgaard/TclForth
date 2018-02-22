@@ -20,8 +20,10 @@ Tcl/Tk is a great and much underrated software universe http://www.tcl.tk/about/
 
 ### [Guide](https://github.com/wolfwejgaard/tclforth/wiki) 
 
-TclForth is different. I hope to illustrate the power of Tcl&Forth for building modern GUI applications.
+The Wiki is a good place for the the Users Guide. TclForth is special but it all makes sense. 
 
+### [Comments](https://github.com/wolfwejgaard/tclforth/wiki) 
+Use the Issues for Comments, Questions, Ideas. 
 
 
 ### [Release v0.7.0](https://github.com/wolfwejgaard/tclforth/releases) 
