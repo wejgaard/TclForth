@@ -11,11 +11,12 @@ Tcl/Tk is a great and much underrated software universe http://www.tcl.tk/about/
 
 ### Features
 
-* Universal desktop Forth, runs unchanged in Windows, OS-X, Linux, and more. 
-* Native data types array, string, list, and dict.
-* Native local variables.
-* Native graphical toolkit based on Tk.
-* Native database (Metakit).
+* Universal desktop Forth 
+* A TclForth program runs unchanged in Windows, OS-X, Linux, and more
+* Native data types array, string, list, and dict
+* Native local variables
+* Native graphical toolkit based on Tk
+* Native database (Metakit)
 * Desktop apps for Windows and OS-X
 
 ### Guide
@@ -24,10 +25,9 @@ The [Wiki](https://github.com/wejgaard/tclforth/wiki) is a good place for the Us
 ### Comments 
 Use the [Issues](https://github.com/wejgaard/tclforth/issues) for Comments, Questions, Ideas. 
 
-
 ### [Release v0.7.0](https://github.com/wolfwejgaard/tclforth/releases) 
 
-The TclForth.zip archive contains the TclForth source files as well as Tcl executables for Windows and OS-X, and shell code for Linux.
+The **TclForth.zip** archive contains the source files as well as Tcl executables for Windows and OS-X, and shell code for Linux.
 
 * Windows: Run tclforth.exe
 * OS-X: Run tclforth.app
