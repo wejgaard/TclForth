@@ -19,11 +19,11 @@ Tcl/Tk is a great and much underrated software universe http://www.tcl.tk/about/
 * Native database (Metakit)
 * Desktop apps for Windows and OS-X
 
-### Guide
-The [Wiki](https://github.com/wejgaard/tclforth/wiki) is a good place for the Users Guide. TclForth is special but it all makes sense. You can experience it interactively.
+### [Guide](https://github.com/wejgaard/tclforth/wiki)
+TclForth is special but it all makes sense. You can experience it interactively.
 
-### Comments 
-Use the [Issues](https://github.com/wejgaard/tclforth/issues) for Comments, Questions, Ideas. 
+### [Comments](https://github.com/wejgaard/tclforth/issues) 
+Use the Issues for Comments, Questions, Ideas. 
 
 ### [Release v0.7.0](https://github.com/wolfwejgaard/tclforth/releases) 
 
