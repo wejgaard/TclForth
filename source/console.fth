@@ -12,7 +12,7 @@
 	"-expand 1 -fill both" Console pack
 	".code" "text" Widget CodeWindow
 	"-height 6 -pady 10 -padx 10 -relief sunken -border 1 -highlightcolor white" CodeWindow config  
-	"-expand 0 -fill both" CodeWindow pack
+\	"-expand 0 -fill both" CodeWindow pack
 ;
 
 \ ===================================================================================
