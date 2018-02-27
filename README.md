@@ -20,7 +20,7 @@ Tcl/Tk is a great and much underrated software universe http://www.tcl.tk/about/
 * Desktop apps for Windows and OS-X
 
 ### [Guide](https://github.com/wejgaard/tclforth/wiki)
-TclForth is special. 
+TclForth is special. A new Forth universe, described here.
 
 ### [Comments](https://github.com/wejgaard/tclforth/issues) 
 Use the Issues for Comments, Questions, Ideas. 
