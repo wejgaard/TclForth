@@ -5,9 +5,7 @@ A multi-platform desktop Forth system based on Tcl/Tk.
 ### Overview
 TclForth uses Tcl as its native language. The Forth code and colon words are compiled to Tcl procedures that handle arguments and results on a stack. The Forth and Tcl procedures coexist in the Tcl namespace and are all taken care of by the Tcl runtime system. Thus, the Tcl bytecode interpreter is also the inner interpreter of TclForth. For details see http://wiki.tcl.tk/37199.
 
-I have built applications with TclForth for a while and release it as an open source project. The system is prepared as self-contained double-click executables for Windows and OS-X (starpacks) and as a set of source files for Tcl in Linux and elsewhere. Installation = unzip.
-
-Tcl/Tk is a great and much underrated software universe http://www.tcl.tk/about/ .  I don't dream of packing it all into Forth. However, TclForth does provide the usual standard words and some more and the set of Tk words that I have needed so far.  And it demonstrates how you can easily add whatever you need. 
+I have built applications with TclForth for a while and release it as an open source project. The system is prepared as self-contained double-click executables for Windows and OS-X (starpacks) and as a set of source files for Tcl in Linux and elsewhere. Installation = unzip. 
 
 ### Features
 
@@ -37,11 +35,5 @@ The **TclForth.zip** archive contains the source files as well as Tcl executable
     cd <source-directory>
     source tfmain.tcl
 ```
-
-
-
-
-
-
 
 
