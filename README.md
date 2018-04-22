@@ -36,4 +36,8 @@ The **TclForth.zip** archive contains the source files as well as Tcl executable
     source tfmain.tcl
 ```
 
+### Example Application ChessMoves Game
+Included with the release.
+
+![Image of Holon86](https://www.holonforth.com/images/tclforth-chess.jpg)
 
