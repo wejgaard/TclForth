@@ -17,7 +17,7 @@ I have built applications with TclForth for a while and release it as an open so
 * Native database (Metakit)
 * Desktop apps for Windows and OS-X
 
-### [Guide](https://github.com/wejgaard/tclforth/wiki)
+### [Guide (Wiki)](https://github.com/wejgaard/tclforth/wiki)
 TclForth is special. Explore a new Forth universe.
 
 ### [Comments](https://github.com/wejgaard/tclforth/issues) 
