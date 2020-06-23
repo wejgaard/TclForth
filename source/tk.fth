@@ -98,3 +98,5 @@ Code windowExists { w -- flag }
 Code Title { text  -- }  
 	wm title . $text
 
+
+\ change 23.6.2020
