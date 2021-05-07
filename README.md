@@ -23,6 +23,8 @@ TclForth is special. Explore a new Forth universe.
 ### [Comments](https://github.com/wejgaard/tclforth/issues) 
 Use the Issues for Comments, Questions, Ideas. 
 
+### UPDATE 64-bit: see https://github.com/wejgaard/HolonCode/tree/master/HolonTF
+
 ### [Release v0.7.0](https://github.com/wolfwejgaard/tclforth/releases) 
 
 The **TclForth.zip** archive contains the source files as well as Tcl executables for Windows and OS-X, and shell code for Linux.
