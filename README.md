@@ -2,8 +2,6 @@
 
 A multi-platform desktop Forth system based on Tcl/Tk.  
 
-![](https://www.holonforth.com)
-
 ### Overview
 TclForth uses Tcl as its native language. The Forth code and colon words are compiled to Tcl procedures that pass arguments and results on a stack. The stack items are handled as local variables. The Forth and Tcl procedures coexist in the Tcl namespace and are all taken care of by the Tcl runtime system. Thus, the Tcl bytecode interpreter is also the inner interpreter of TclForth. For details see http://wiki.tcl.tk/37199.
 
